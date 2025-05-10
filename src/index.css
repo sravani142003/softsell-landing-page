@@ -1,0 +1,64 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font family and background/text color */
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-white text-gray-800 dark:bg-gray-900 dark:text-white;
+  @apply transition-colors duration-300;
+}
+
+/* Smooth transitions for all elements */
+* {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200 dark:bg-gray-700;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-br from-blue-500 to-purple-500 rounded-full;
+}
+
+/* Buttons */
+button {
+  @apply cursor-pointer transition-transform duration-200;
+}
+
+button:hover {
+  @apply scale-105 shadow-lg;
+}
+
+/* Inputs, selects, textareas */
+input, select, textarea {
+  @apply rounded border border-gray-300 dark:border-gray-600 p-2 w-full;
+  @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  @apply font-bold;
+}
+
+/* Links */
+a {
+  @apply text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300;
+}
+
+/* Utility for glowing CTA buttons */
+.cta-button {
+  @apply bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg;
+}
+
+.cta-button:hover {
+  @apply shadow-xl scale-105;
+}
